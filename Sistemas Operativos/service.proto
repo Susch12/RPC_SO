@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package square;
+
+service SquareCalculator {
+  rpc CalculateSquare(SquareRequest) returns (SquareResponse) {}
+}
+
+message SquareRequest {
+  int32 side = 1;
+}
+
+message SquareResponse {
+  int32 perimeter = 1;
+  int32 area = 2;
+}
