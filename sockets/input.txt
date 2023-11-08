@@ -1,0 +1,3 @@
+    message = input('').encode()  # Encode the message before sending
+    print('sending {!r}'.format(message))
+    sock.sendall(message)
