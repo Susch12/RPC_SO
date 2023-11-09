@@ -14,7 +14,7 @@ try:
     # Send data
     print('Escribe el mensaje: ')
     message = input('').encode()
-    print('sending {!r}'.format(message))
+    print('sending {!r}'.format(message.decode('utf-8')))
     sock.sendall(message)
 
     # Look for the response
@@ -24,7 +24,7 @@ try:
     while amount_received < amount_expected:
         data = sock.recv(16)
         amount_received += len(data)
-        print('received {!r}'.format(data))
+        print('received {!r}'.format(data.decode('utf-8')))
 
 finally:
     print('closing socket')
