@@ -5,7 +5,8 @@ import sys
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 server_address = ('localhost', 10000)
-message = b'This is the message.  It will be repeated.'
+print('Escribe el mensaje: ')
+message = input('').encode()
 
 try:
 
